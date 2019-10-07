@@ -21,7 +21,7 @@ src="https://unpkg.com/babel-standalone@6/babel.min.js">
 <script type= 'text/babel'>
     // Our code will go here
 
-  function App() {
+  function App(props) {
     return (
       <div>
         <header>
@@ -30,7 +30,7 @@ src="https://unpkg.com/babel-standalone@6/babel.min.js">
         <main>
           <section>
             <h2>My Contact Info</h2>
-            <p>Name: Sally Student</p>
+            <p>{props.children}</p>
             <p>312-555-1234</p>
             <a href="mailto:sallystudent@gmail.com">Send me an email!</a>
             <address>510 Thinkful Road, Chicago, IL</address>
@@ -61,7 +61,7 @@ src="https://unpkg.com/babel-standalone@6/babel.min.js">
 }
 
 ReactDOM.render(
-  <App/>,
+  <App><h1>Sally Student</h1></App>,
   document.querySelector('#application-root')
 );
 
