@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"></html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>React Hello World</title>
+    <title>Sally Student Resume</title>
 </head>
 <body>
     <div id="application-root"></div>
@@ -20,27 +20,48 @@ src="https://unpkg.com/babel-standalone@6/babel.min.js">
 </script>
 <script type= 'text/babel'>
     // Our code will go here
-    ReactDOM.render(
-    <div>
-      <h1>Hello, world!</h1>
-      <p>How are you today?</p>
-      <h2>Look what React can do!</h2>
-    </div>,
-    document.querySelector('#application-root')
-  );
 
-  function App(props) {
-  console.log(props)
-  return (
-    <span className='app-class'>
-      My App
-    </span>
+  function App() {
+    return (
+      <div>
+        <header>
+          <h1>My Resume</h1>
+        </header>
+        <main>
+          <section>
+            <h2>My Contact Info</h2>
+            <p>Name: Sally Student</p>
+            <p>312-555-1234</p>
+            <a href="mailto:sallystudent@gmail.com">Send me an email!</a>
+            <address>510 Thinkful Road, Chicago, IL</address>
+            <img src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" alt="Me"></img>
+          </section>
+
+          <section>
+            <h2>Education</h2>
+            <h3>Bachelors Computer Science</h3>
+            <p>Standford University</p>
+          </section>
+
+          <section>
+            <h2>Employment History</h2>
+            <h3>Thinkful</h3>
+            <p>Student</p>
+            <p>2019-2020</p>
+            <p>Description: Required to learn about coding</p>
+
+            <h3>Gas Station LTD</h3>
+            <p>Cashier</p>
+            <p>2011-2012</p>
+            <p>Description: Required to serve customers</p>
+          </section>
+        </main>
+      </div>
   );
 }
 
 ReactDOM.render(
-  // Add a className to the App
-  <App className='new-class-name' />,
+  <App/>,
   document.querySelector('#application-root')
 );
 
